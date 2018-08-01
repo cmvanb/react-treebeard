@@ -29,7 +29,8 @@ const Toggle = ({style}) => {
     );
 };
 Toggle.propTypes = {
-    style: PropTypes.object
+    style: PropTypes.object,
+    node: PropTypes.object
 };
 
 const Header = ({node, style}) => {
