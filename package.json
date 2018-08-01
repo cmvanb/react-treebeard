@@ -1,5 +1,5 @@
 {
-  "name": "react-treebeard",
+  "name": "@casper/react-treebeard",
   "version": "2.1.0",
   "description": "React Tree View Component",
   "main": "index.js",
