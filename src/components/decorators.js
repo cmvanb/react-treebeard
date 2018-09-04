@@ -55,12 +55,13 @@ class Container extends React.Component {
 
         return (
             <div onClick={onSelect}
-                 ref={ref => this.clickableRef = ref}
-                 style={style.container}>
+                ref={ref => this.clickableRef = ref}
+                style={style.container}>
                 {!terminal ? this.renderToggle() : null}
 
-                <decorators.Header node={node}
-                                   style={style.header} />
+                <decorators.Header
+                    node={node}
+                    style={style.header} />
             </div>
         );
     }

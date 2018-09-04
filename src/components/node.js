@@ -7,8 +7,8 @@ import {VelocityTransitionGroup} from 'velocity-react';
 import NodeHeader from './header';
 
 class TreeNode extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.onSelect = this.onSelect.bind(this);
         this.onToggle = this.onToggle.bind(this);
@@ -94,6 +94,7 @@ class TreeNode extends React.Component {
                         decorators={decorators}
                         node={Object.assign({}, node)}
                         onSelect={this.onSelect}
+                        onToggle={this.onToggle}
                         style={style}/>
         );
     }
