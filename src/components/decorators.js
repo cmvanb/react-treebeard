@@ -83,7 +83,7 @@ class Container extends React.Component {
     renderToggleDecorator() {
         const {style, decorators, node, onToggle} = this.props;
 
-        return <decorators.Toggle node={node} style={style.toggle} onClick={onToggle}/>;
+        return <decorators.Toggle node={node} style={style.toggle} onToggle={onToggle}/>;
     }
 }
 Container.propTypes = {
