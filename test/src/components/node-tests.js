@@ -38,7 +38,7 @@ describe('node component', () => {
                       node={node}
                       onToggle={onToggle}/>
         );
-        treeNode.onClick();
+        treeNode.onToggle();
     });
 
     it('should call the onToggle callback once if it is registered on click', () => {
@@ -49,7 +49,7 @@ describe('node component', () => {
                 onToggle={onToggle}
             />
         );
-        treeNode.onClick();
+        treeNode.onToggle();
 
         onToggle.should.be.called.once;
     });
@@ -57,7 +57,7 @@ describe('node component', () => {
     it('should not throw an exception if a callback is not registered on click', () => {
         const treeNode = TestUtils.renderIntoDocument(<TreeNode {...defaults}/>);
 
-        (() => treeNode.onClick()).should.not.throw(Error);
+        (() => treeNode.onToggle()).should.not.throw(Error);
     });
 
     it('should use the node animations if defined', () => {

@@ -5,6 +5,9 @@ var webpackCfg = require('./webpack.config.test.js');
 
 module.exports = function(config) {
     config.set({
+        client: {
+            captureConsole: true
+        },
         basePath: '',
         frameworks: ['mocha'],
         files: [

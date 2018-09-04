@@ -18,22 +18,22 @@ const defaults = {
     animations: {toggle: {}},
     terminal: false,
     decorators: createDecorators(),
-    onClick: () => null
+    onSelect: () => null
 };
 
 const Container = defaultDecorators.Container;
 
 describe('container decorator component', () => {
     it('should render a clickable element with a click event handler', () => {
-        const onClick = sinon.spy();
+        const onSelect = sinon.spy();
         const container = TestUtils.renderIntoDocument(
             <Container {...defaults}
-                       onClick={onClick}/>
+                       onSelect={onSelect}/>
         );
         const clickable = container.clickableRef;
         TestUtils.Simulate.click(clickable);
 
-        onClick.should.be.called.once;
+        onSelect.should.be.called.once;
     });
 
     it('should render the toggle decorator not terminal', () => {

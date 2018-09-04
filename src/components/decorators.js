@@ -50,16 +50,16 @@ Header.propTypes = {
 @Radium
 class Container extends React.Component {
     render() {
-        const {style, decorators, terminal, onClick, node} = this.props;
+        const {style, decorators, terminal, onSelect, node} = this.props;
 
         return (
-            <div onClick={onClick}
+            <div onClick={onSelect}
                  ref={ref => this.clickableRef = ref}
                  style={style.container}>
                 {!terminal ? this.renderToggle() : null}
 
                 <decorators.Header node={node}
-                                   style={style.header}/>
+                                   style={style.header} />
             </div>
         );
     }
@@ -81,16 +81,17 @@ class Container extends React.Component {
     }
 
     renderToggleDecorator() {
-        const {style, decorators, node} = this.props;
+        const {style, decorators, node, onToggle} = this.props;
 
-        return <decorators.Toggle node={node} style={style.toggle}/>;
+        return <decorators.Toggle node={node} style={style.toggle} onClick={onToggle}/>;
     }
 }
 Container.propTypes = {
     style: PropTypes.object.isRequired,
     decorators: PropTypes.object.isRequired,
     terminal: PropTypes.bool.isRequired,
-    onClick: PropTypes.func.isRequired,
+    onSelect: PropTypes.func.isRequired,
+    onToggle: PropTypes.func,
     animations: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.bool
