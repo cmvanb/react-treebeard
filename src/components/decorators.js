@@ -30,7 +30,8 @@ const Toggle = ({style}) => {
 };
 Toggle.propTypes = {
     style: PropTypes.object,
-    node: PropTypes.object
+    node: PropTypes.object,
+    onToggle: PropTypes.func
 };
 
 const Header = ({node, style}) => {
