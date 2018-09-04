@@ -10,6 +10,13 @@ React Tree View Component. Data-Driven, Fast, Efficient and Customisable.
 npm install react-treebeard --save
 ```
 
+### Publish
+```
+npm run prepublish
+npm version x.x.x
+npm publish
+```
+
 ### [Example](http://storybooks.github.io/react-treebeard/)
 
 An online example from the `/example` directory can be found here: [Here](http://storybooks.github.io/react-treebeard/)
